@@ -4,7 +4,7 @@ import { ProblemSection } from "@/components/home/problem-section";
 import { ServicesPreview } from "@/components/home/services-preview";
 import { FeaturedWork } from "@/components/home/featured-work";
 import { ProcessPreview } from "@/components/home/process-preview";
-import { FinalCta } from "@/components/home/final-cta";
+import { FinalCta } from "@/components/sections/final-cta";
 
 export default function Home() {
   return (

@@ -22,12 +22,12 @@ export const site = {
   availability: "Available for new projects · Remote, worldwide",
   nav: [
     { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
+    { label: "Work", href: "/work" },
     { label: "Process", href: "/process" },
     { label: "About", href: "/about" },
   ] as NavItem[],
   cta: {
-    primary: { label: "View Case Studies", href: "/case-studies" },
+    primary: { label: "View Case Studies", href: "/work" },
     secondary: { label: "Start a Project", href: "/contact" },
   },
   stack: [

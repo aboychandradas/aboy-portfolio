@@ -31,12 +31,15 @@ export function SectionHeading({
   title,
   lede,
   align = "left",
+  as: HeadingTag = "h2",
   className,
 }: {
   eyebrow?: string;
   title: string;
   lede?: string;
   align?: "left" | "center";
+  /** Use "h1" when this heading opens a page instead of a section. */
+  as?: "h1" | "h2";
   className?: string;
 }) {
   return (
@@ -52,9 +55,16 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+      <HeadingTag
+        className={cn(
+          "mt-3 font-heading font-semibold tracking-tight text-balance",
+          HeadingTag === "h1"
+            ? "text-4xl sm:text-5xl"
+            : "text-3xl sm:text-4xl"
+        )}
+      >
         {title}
-      </h2>
+      </HeadingTag>
       {lede ? (
         <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
           {lede}
