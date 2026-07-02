@@ -3,10 +3,11 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { MotifPreview } from "@/components/work/motif-preview";
+import { TechBadge } from "@/components/tech/tech-badge";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="grid overflow-hidden rounded-2xl border border-border bg-surface lg:grid-cols-5">
+    <article className="grid overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-border-strong lg:grid-cols-5">
       <div className="h-56 border-b border-border bg-background/50 lg:col-span-2 lg:h-auto lg:min-h-72 lg:border-b-0 lg:border-r">
         <MotifPreview motif={project.motif} />
       </div>
@@ -46,12 +47,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
         <div className="mt-6 flex flex-wrap gap-1.5">
           {project.techStack.map((tool) => (
-            <span
-              key={tool}
-              className="rounded border border-border bg-background/60 px-2 py-0.5 font-mono text-[10px] text-faint"
-            >
-              {tool}
-            </span>
+            <TechBadge key={tool} name={tool} />
           ))}
         </div>
 

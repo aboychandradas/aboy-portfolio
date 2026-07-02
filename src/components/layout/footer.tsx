@@ -34,7 +34,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/60 bg-surface/40">
-      <Container className="py-14 sm:py-16">
+      <Container className="py-16 sm:py-20">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">

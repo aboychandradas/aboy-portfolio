@@ -3,6 +3,7 @@ import { TrustBadges } from "@/components/home/trust-badges";
 import { ProblemSection } from "@/components/home/problem-section";
 import { ServicesPreview } from "@/components/home/services-preview";
 import { FeaturedWork } from "@/components/home/featured-work";
+import { TechStack } from "@/components/home/tech-stack";
 import { ProcessPreview } from "@/components/home/process-preview";
 import { FinalCta } from "@/components/sections/final-cta";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <ProblemSection />
       <ServicesPreview />
       <FeaturedWork />
+      <TechStack />
       <ProcessPreview />
       <FinalCta />
     </>

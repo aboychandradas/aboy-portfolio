@@ -28,6 +28,9 @@ export function Navbar() {
   const pathname = usePathname();
   const closeMenu = () => setOpen(false);
 
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between">
@@ -38,10 +41,11 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
               className={cn(
                 "rounded-md px-3 py-2 text-sm transition-colors",
-                pathname === item.href
-                  ? "text-foreground"
+                isActive(item.href)
+                  ? "bg-surface text-foreground"
                   : "text-muted hover:text-foreground"
               )}
             >
@@ -84,10 +88,11 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
+                  aria-current={isActive(item.href) ? "page" : undefined}
                   className={cn(
                     "rounded-md px-3 py-2.5 text-[15px] transition-colors",
-                    pathname === item.href
-                      ? "text-foreground"
+                    isActive(item.href)
+                      ? "bg-surface text-foreground"
                       : "text-muted hover:text-foreground"
                   )}
                 >

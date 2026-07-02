@@ -38,18 +38,6 @@ export const site = {
     primary: { label: "View Work", href: "/work" },
     secondary: { label: "How to Start", href: "/start" },
   },
-  stack: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "PostgreSQL",
-    "Prisma",
-    "Zod",
-    "Framer Motion",
-    "Vercel",
-  ],
   socials: [
     // TODO: confirm the GitHub username and add the remaining profile URLs.
     { label: "GitHub", href: "https://github.com/Avoy22", icon: "github" },

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/motion/reveal";
 import { MotifPreview } from "@/components/work/motif-preview";
+import { TechBadge } from "@/components/tech/tech-badge";
 
 export function FeaturedWork() {
   return (
@@ -20,7 +21,7 @@ export function FeaturedWork() {
       <div className="mt-12 grid gap-5 lg:grid-cols-3">
         {featuredProjects.map((project, index) => (
           <Reveal key={project.slug} delay={index * 0.08}>
-            <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
+            <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors hover:border-border-strong">
               <div className="h-44 border-b border-border bg-background/50">
                 <MotifPreview motif={project.motif} />
               </div>
@@ -52,12 +53,7 @@ export function FeaturedWork() {
 
                 <div className="mt-5 flex flex-wrap gap-1.5">
                   {project.techStack.slice(0, 5).map((tool) => (
-                    <span
-                      key={tool}
-                      className="rounded border border-border bg-background/60 px-2 py-0.5 font-mono text-[10px] text-faint"
-                    >
-                      {tool}
-                    </span>
+                    <TechBadge key={tool} name={tool} />
                   ))}
                 </div>
 

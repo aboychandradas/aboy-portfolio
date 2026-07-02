@@ -33,10 +33,6 @@ export function FinalCta() {
                 See Services
               </ButtonLink>
             </div>
-
-            <p className="mx-auto mt-6 max-w-md text-xs leading-relaxed text-faint">
-              {site.marketplaceNote}
-            </p>
           </div>
         </div>
       </Reveal>

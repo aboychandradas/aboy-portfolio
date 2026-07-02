@@ -32,7 +32,7 @@ export function ServicesPreview() {
           const Icon = serviceIcons[service.icon];
           return (
             <Reveal key={service.slug} delay={index * 0.06}>
-              <div className="flex h-full flex-col rounded-xl border border-border bg-surface p-6">
+              <div className="flex h-full flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-border-strong">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-muted">
                   <Icon className="h-5 w-5 text-brand-bright" />
                 </span>

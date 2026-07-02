@@ -11,6 +11,7 @@ import { ButtonLink, buttonClasses } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 import { MotifPreview } from "@/components/work/motif-preview";
+import { TechBadge } from "@/components/tech/tech-badge";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -283,12 +284,7 @@ export default async function CaseStudyPage({
                 </p>
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {project.techStack.map((tool) => (
-                    <span
-                      key={tool}
-                      className="rounded border border-border bg-background/60 px-2 py-0.5 font-mono text-[10px] text-faint"
-                    >
-                      {tool}
-                    </span>
+                    <TechBadge key={tool} name={tool} />
                   ))}
                 </div>
               </div>

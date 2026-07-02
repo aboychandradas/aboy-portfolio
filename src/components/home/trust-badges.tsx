@@ -1,6 +1,5 @@
 import { FileSpreadsheet, MessagesSquare, ShieldCheck } from "lucide-react";
 import { site } from "@/data/site";
-import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import { ProfilePhoto } from "@/components/ui/profile-photo";
 import { Reveal } from "@/components/motion/reveal";
@@ -67,21 +66,6 @@ export function TrustBadges() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.2}>
-          <div className="mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <p className="shrink-0 font-mono text-xs font-medium uppercase tracking-[0.2em] text-faint">
-              Stack
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {site.stack.map((tool) => (
-                <Badge key={tool} className="font-mono text-[11px]">
-                  {tool}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </Reveal>
       </Container>
     </section>
   );
