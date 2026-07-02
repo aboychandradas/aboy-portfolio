@@ -21,8 +21,8 @@ export const site = {
     "Aboy Systems is the studio of Aboy Chandra Das — a full-stack developer building dashboards, CRM systems, automation tools, and admin workflows for small businesses, agencies, and e-commerce teams. Next.js, TypeScript, Tailwind CSS.",
   availability: "Available for new projects · Remote, worldwide",
   nav: [
-    { label: "Services", href: "/services" },
     { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
     { label: "Process", href: "/process" },
     { label: "About", href: "/about" },
   ] as NavItem[],

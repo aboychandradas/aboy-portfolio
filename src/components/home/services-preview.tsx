@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   Check,
-  Database,
   LayoutDashboard,
   Users,
   Workflow,
@@ -15,7 +14,6 @@ const serviceIcons: Record<ServiceIcon, React.ComponentType<{ className?: string
   dashboard: LayoutDashboard,
   crm: Users,
   automation: Workflow,
-  admin: Database,
 };
 
 export function ServicesPreview() {
@@ -25,11 +23,11 @@ export function ServicesPreview() {
         <SectionHeading
           eyebrow="Services"
           title="Web apps built around operations, not just pages."
-          lede="Four ways I help businesses replace manual work with software they own."
+          lede="Three ways I help businesses replace manual work with software they own."
         />
       </Reveal>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => {
           const Icon = serviceIcons[service.icon];
           return (
@@ -45,16 +43,25 @@ export function ServicesPreview() {
                   {service.description}
                 </p>
                 <ul className="mt-4 space-y-2">
-                  {service.deliverables.map((deliverable) => (
+                  {service.clientsGet.slice(0, 3).map((item) => (
                     <li
-                      key={deliverable}
+                      key={item}
                       className="flex items-start gap-2 text-sm text-muted"
                     >
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-bright" />
-                      {deliverable}
+                      {item}
                     </li>
                   ))}
                 </ul>
+                <div className="mt-auto pt-5">
+                  <Link
+                    href={`/services#${service.slug}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+                  >
+                    Learn more
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </Reveal>
           );
