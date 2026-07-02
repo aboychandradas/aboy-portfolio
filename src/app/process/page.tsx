@@ -50,7 +50,7 @@ export default function ProcessPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
+          className="absolute inset-0 bg-grid-subtle mask-[radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
         />
         <Container className="relative pb-4 pt-16 sm:pt-24">
           <Reveal>
@@ -174,13 +174,13 @@ export default function ProcessPage() {
 
       <PageCta
         title="See what this process produces."
-        body="The work page shows the playbook applied end to end — a deployed build and two fully scoped roadmaps, each labeled honestly."
+        body="The work page shows this playbook applied end to end — a deployed build and two fully scoped roadmaps, each labeled for what it is."
       >
         <ButtonLink href="/work" size="lg">
-          View the work
+          View Work
         </ButtonLink>
-        <ButtonLink href={`mailto:${site.email}`} external variant="secondary" size="lg">
-          Email me about a project
+        <ButtonLink href="/start" variant="secondary" size="lg">
+          How to Start
         </ButtonLink>
       </PageCta>
     </>

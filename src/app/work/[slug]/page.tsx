@@ -176,7 +176,7 @@ export default async function CaseStudyPage({
       <section className="relative overflow-hidden border-b border-border/60">
         <div
           aria-hidden
-          className="absolute left-1/2 top-[-14rem] h-[22rem] w-[40rem] -translate-x-1/2 rounded-full bg-brand/10 blur-[120px]"
+          className="absolute left-1/2 -top-56 h-88 w-160 -translate-x-1/2 rounded-full bg-brand/10 blur-[120px]"
         />
         <Container className="relative pb-12 pt-10 sm:pb-16 sm:pt-14">
           <Reveal>
@@ -266,7 +266,7 @@ export default async function CaseStudyPage({
                       <p className="font-heading text-lg font-semibold tracking-tight">
                         {metric.value}
                       </p>
-                      <p className="mt-0.5 font-mono text-[9px] uppercase tracking-[0.1em] text-faint">
+                      <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-faint">
                         {metric.label}
                       </p>
                     </div>
@@ -404,8 +404,9 @@ export default async function CaseStudyPage({
               Want a system like this behind your business?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Tell me what the work looks like today — spreadsheet, inbox,
-              whiteboard — and I’ll come back with an honest scope: what to
+              Describe how the work happens today — spreadsheet, inbox,
+              whiteboard — in a message on the platform where you found this
+              portfolio, and I’ll come back with an honest scope: what to
               build first, and what it takes.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

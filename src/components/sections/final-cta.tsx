@@ -6,7 +6,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 export function FinalCta() {
   return (
-    <Section id="start">
+    <Section id="start-here">
       <Reveal>
         <div className="relative overflow-hidden rounded-2xl border border-border bg-surface px-6 py-14 text-center sm:px-14 sm:py-20">
           <div
@@ -19,9 +19,9 @@ export function FinalCta() {
               Have a spreadsheet that deserves to be an app?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted">
-              Tell me how the work happens today. I’ll reply with honest scoping
-              — what to build, what to skip, and a realistic timeline. If I’m
-              not the right fit, I’ll say so.
+              Found this portfolio on Upwork, Fiverr, or Freelancer? Message me
+              there — the Start page shows exactly what to include so scoping
+              goes fast, and everything stays protected on the platform.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -29,23 +29,13 @@ export function FinalCta() {
                 {site.cta.secondary.label}
                 <ArrowRight className="h-4 w-4" />
               </ButtonLink>
-              <ButtonLink
-                href={site.cta.primary.href}
-                variant="secondary"
-                size="lg"
-              >
-                {site.cta.primary.label}
+              <ButtonLink href="/services" variant="secondary" size="lg">
+                See Services
               </ButtonLink>
             </div>
 
-            <p className="mt-6 text-xs text-faint">
-              Prefer email?{" "}
-              <a
-                href={`mailto:${site.email}`}
-                className="underline underline-offset-4 transition-colors hover:text-foreground"
-              >
-                {site.email}
-              </a>
+            <p className="mx-auto mt-6 max-w-md text-xs leading-relaxed text-faint">
+              {site.marketplaceNote}
             </p>
           </div>
         </div>

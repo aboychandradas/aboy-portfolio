@@ -2,6 +2,7 @@ import { FileSpreadsheet, MessagesSquare, ShieldCheck } from "lucide-react";
 import { site } from "@/data/site";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
+import { ProfilePhoto } from "@/components/ui/profile-photo";
 import { Reveal } from "@/components/motion/reveal";
 
 const promises = [
@@ -21,7 +22,7 @@ const promises = [
     icon: MessagesSquare,
     title: "Clear, async communication",
     description:
-      "Written updates and short demo videos as the build progresses — made for working across time zones.",
+      "Short written updates and demo videos as the build progresses — made for working across time zones.",
   },
 ];
 
@@ -29,7 +30,27 @@ export function TrustBadges() {
   return (
     <section className="border-t border-border/60">
       <Container className="py-14 sm:py-16">
-        <div className="grid gap-8 md:grid-cols-3">
+        <Reveal>
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <ProfilePhoto
+              className="h-20 w-20 shrink-0 rounded-xl"
+              iconClassName="h-8 w-8"
+              sizes="80px"
+            />
+            <div>
+              <p className="font-medium">
+                {site.owner} <span className="text-faint">·</span>{" "}
+                <span className="text-muted">{site.name}</span>
+              </p>
+              <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted">
+                One developer, end to end — the person you message is the
+                person who designs, builds, and ships your system.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="mt-10 grid gap-8 border-t border-border/60 pt-10 md:grid-cols-3">
           {promises.map((promise, index) => (
             <Reveal key={promise.title} delay={index * 0.08}>
               <div className="flex gap-4">

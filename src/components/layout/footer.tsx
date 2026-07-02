@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaUpwork } from "react-icons/fa6";
 import { SiFiverr } from "react-icons/si";
 import { site, type SocialLink } from "@/data/site";
@@ -50,26 +49,24 @@ export function Footer() {
               Full-stack web apps for dashboards, CRM systems, automation, and
               business operations.
             </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="mt-4 inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
-            >
-              <Mail className="h-4 w-4" />
-              {site.email}
-            </a>
+            <p className="mt-4 max-w-xs text-xs leading-relaxed text-faint">
+              {site.marketplaceNote}
+            </p>
           </div>
 
           <FooterColumn title="Pages">
-            {[...site.nav, { label: "Contact", href: "/contact" }].map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-muted transition-colors hover:text-foreground"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {[...site.nav, { label: "How to Start", href: "/start" }].map(
+              (item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-muted transition-colors hover:text-foreground"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            )}
           </FooterColumn>
 
           <FooterColumn title="Services">
@@ -102,15 +99,6 @@ export function Footer() {
                 </li>
               );
             })}
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
-              >
-                <Mail className="h-4 w-4" />
-                Email
-              </a>
-            </li>
           </FooterColumn>
         </div>
 

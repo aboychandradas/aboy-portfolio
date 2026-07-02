@@ -3,7 +3,6 @@ import {
   ArrowRight,
   BookOpen,
   Boxes,
-  Mail,
   MonitorSmartphone,
   PencilRuler,
   Rocket,
@@ -15,6 +14,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
+import { ProfilePhoto } from "@/components/ui/profile-photo";
 import { Reveal } from "@/components/motion/reveal";
 import { PageCta } from "@/components/sections/page-cta";
 
@@ -111,7 +111,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
+          className="absolute inset-0 bg-grid-subtle mask-[radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
         />
         <Container className="relative pb-16 pt-16 sm:pt-24">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16">
@@ -192,6 +192,11 @@ export default function AboutPage() {
             <aside>
               <Reveal delay={0.12} className="lg:sticky lg:top-24">
                 <div className="rounded-2xl border border-border bg-surface p-6">
+                  <ProfilePhoto
+                    className="mb-5 aspect-square w-full rounded-xl"
+                    iconClassName="h-14 w-14"
+                    sizes="(min-width: 1024px) 272px, 100vw"
+                  />
                   <div className="flex items-center gap-2.5">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand font-heading text-sm font-bold text-brand-foreground">
                       A
@@ -231,9 +236,8 @@ export default function AboutPage() {
                   </dl>
 
                   <div className="mt-6 flex flex-col gap-2.5 border-t border-border/60 pt-5">
-                    <ButtonLink href={`mailto:${site.email}`} external className="w-full">
-                      <Mail className="h-4 w-4" />
-                      Email me
+                    <ButtonLink href="/start" className="w-full">
+                      How to Start
                     </ButtonLink>
                     {github ? (
                       <ButtonLink

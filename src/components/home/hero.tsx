@@ -10,11 +10,11 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div
         aria-hidden
-        className="absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black_30%,transparent_100%)]"
+        className="absolute inset-0 bg-grid-subtle mask-[radial-gradient(ellipse_70%_60%_at_50%_0%,black_30%,transparent_100%)]"
       />
       <div
         aria-hidden
-        className="absolute left-1/2 top-[-12rem] h-[24rem] w-[42rem] -translate-x-1/2 rounded-full bg-brand/15 blur-[120px]"
+        className="absolute left-1/2 -top-48 h-96 w-168 -translate-x-1/2 rounded-full bg-brand/15 blur-[120px]"
       />
 
       <Container className="relative">

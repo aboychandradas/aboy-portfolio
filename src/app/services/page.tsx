@@ -67,7 +67,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
+          className="absolute inset-0 bg-grid-subtle mask-[radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
         />
         <Container className="relative pb-4 pt-16 sm:pt-24">
           <Reveal>
@@ -203,13 +203,13 @@ export default function ServicesPage() {
 
       <PageCta
         title="Not sure which service fits?"
-        body="Most real projects are a mix. Tell me how the work happens today, and I’ll suggest the smallest system that removes the most manual work — with the proof to back it up."
+        body="Most real projects are a mix. Describe how the work happens today, and I’ll suggest the smallest system that removes the most manual work. The Start page shows what to include in your message."
       >
-        <ButtonLink href={`mailto:${site.email}`} external size="lg">
-          Email me about your project
+        <ButtonLink href="/start" size="lg">
+          How to Start
         </ButtonLink>
         <ButtonLink href="/work" variant="secondary" size="lg">
-          See the proof first
+          View Work
         </ButtonLink>
       </PageCta>
     </>

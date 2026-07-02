@@ -29,7 +29,7 @@ export default function WorkPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 bg-grid-subtle [mask-image:radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
+          className="absolute inset-0 bg-grid-subtle mask-[radial-gradient(ellipse_70%_70%_at_50%_0%,black_20%,transparent_100%)]"
         />
         <Container className="relative pb-4 pt-16 sm:pt-24">
           <Reveal>
@@ -37,7 +37,7 @@ export default function WorkPage() {
               as="h1"
               eyebrow="Work"
               title="Systems built end to end — and labeled honestly."
-              lede="Every project below is either a deployed, self-initiated product or a client-grade build roadmap, and each page says which. That's deliberate: it's the same straight answer you'd get about your own project's scope."
+              lede="Every project here is either a deployed, self-initiated product or a clearly labeled build roadmap. No invented clients, no borrowed screenshots — you can check everything yourself."
             />
           </Reveal>
         </Container>

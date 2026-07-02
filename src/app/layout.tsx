@@ -52,6 +52,17 @@ export const metadata: Metadata = {
     title: "Aboy Systems — Dashboards, CRMs & Business Web Apps",
     description: site.description,
   },
+  // Placeholder icon files — add the real assets to /public (see project notes).
+  icons: {
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  appleWebApp: {
+    title: site.name,
+  },
 };
 
 export const viewport: Viewport = {

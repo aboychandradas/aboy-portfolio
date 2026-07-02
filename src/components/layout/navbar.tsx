@@ -33,7 +33,7 @@ export function Navbar() {
       <Container className="flex h-16 items-center justify-between">
         <BrandMark onNavigate={closeMenu} />
 
-        <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           {site.nav.map((item) => (
             <Link
               key={item.href}
@@ -50,7 +50,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <ButtonLink href={site.cta.secondary.href} size="md">
             {site.cta.secondary.label}
           </ButtonLink>
@@ -58,7 +58,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-md text-muted transition-colors hover:text-foreground md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md text-muted transition-colors hover:text-foreground lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -72,7 +72,7 @@ export function Navbar() {
         {open ? (
           <motion.div
             id="mobile-nav"
-            className="overflow-hidden border-t border-border/60 bg-background md:hidden"
+            className="overflow-hidden border-t border-border/60 bg-background lg:hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
