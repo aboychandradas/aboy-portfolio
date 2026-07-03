@@ -21,6 +21,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: "How to Start",
   description: pageDescription,
+  alternates: { canonical: "/start" },
   openGraph: {
     title: `How to Start — ${site.name}`,
     description: pageDescription,

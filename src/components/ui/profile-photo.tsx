@@ -42,7 +42,7 @@ export function ProfilePhoto({
         />
       ) : (
         <div
-          aria-label="Photo placeholder"
+          aria-hidden
           className="flex h-full w-full items-center justify-center bg-surface-raised/50"
         >
           <UserRound className={cn("text-faint", iconClassName)} />

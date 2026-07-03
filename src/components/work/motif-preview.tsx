@@ -4,7 +4,7 @@ import type { ProjectMotif } from "@/data/projects";
 export function MotifPreview({ motif }: { motif: ProjectMotif }) {
   if (motif === "chart") {
     return (
-      <div className="flex h-full items-end gap-2 p-6">
+      <div aria-hidden className="flex h-full items-end gap-2 p-6">
         {[38, 58, 44, 72, 52, 84, 66, 95].map((height, index) => (
           <div
             key={index}
@@ -22,7 +22,7 @@ export function MotifPreview({ motif }: { motif: ProjectMotif }) {
 
   if (motif === "pipeline") {
     return (
-      <div className="grid h-full grid-cols-3 gap-2.5 p-6">
+      <div aria-hidden className="grid h-full grid-cols-3 gap-2.5 p-6">
         {[
           ["h-9", "h-12", "h-7"],
           ["h-12", "h-8"],
@@ -50,7 +50,7 @@ export function MotifPreview({ motif }: { motif: ProjectMotif }) {
   }
 
   return (
-    <div className="flex h-full flex-col justify-center gap-2.5 p-6">
+    <div aria-hidden className="flex h-full flex-col justify-center gap-2.5 p-6">
       <div className="flex gap-2.5">
         <span className="h-2 w-10 rounded-full bg-brand/50" />
         <span className="h-2 flex-1 rounded-full bg-brand/25" />

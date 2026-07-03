@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aboy Systems — Portfolio
 
-## Getting Started
+Professional portfolio of **Aboy Chandra Das** (Aboy Systems): a full-stack developer building practical business web apps — dashboards, CRM systems, automation tools, and admin panels.
 
-First, run the development server:
+**Live demo:** _coming soon — deployed on Vercel_ <!-- TODO: add the real URL after deploy and update site.url in src/data/site.ts -->
+
+## What this site is
+
+A proof-first portfolio for global freelance clients on Upwork, Fiverr, Freelancer, and LinkedIn. Every project is labeled for exactly what it is — a deployed, self-initiated build or a clearly marked build roadmap. No invented clients, no fake testimonials, no stock case studies.
+
+### Marketplace-safe by design
+
+This site is used as a portfolio link on freelance marketplaces, so it deliberately contains **no direct contact method** — no contact form, email, phone, or scheduling links. Clients are pointed back to the platform where they found the portfolio (see the **How to Start** page). Communication and payment for marketplace projects stay inside that platform, start to finish. Do not add direct contact channels without understanding the marketplace rules first.
+
+## Features
+
+- Dark, product-focused design system (near-black / white / deep indigo) built on Tailwind CSS v4 tokens
+- Case study pages with honest status labels, demo/scope metrics, and safe "coming soon" placeholders for demo and repo links
+- Tech stack section with official icons (react-icons Simple Icons set), grouped by category
+- Pure-CSS product illustrations (dashboard mock, project motifs) — no fake screenshots
+- Subtle scroll animations (Framer Motion) that respect reduced-motion preferences
+- SEO: per-page metadata, canonical URLs, Open Graph/Twitter tags, sitemap, robots, FAQ structured data
+- PWA basics: web manifest, app icons, apple-touch-icon (asset files supplied separately)
+- Fully static — every route prerenders at build time
+
+## Pages
+
+| Route | Purpose |
+|---|---|
+| `/` | Homepage: hero, trust section, problems, services, featured work, tech stack, process, CTA |
+| `/work` | All projects with honest status labels |
+| `/work/[slug]` | Case studies / build plans (3 projects) |
+| `/services` | Three services with deliverables and example features |
+| `/process` | Six-step process with per-step deliverables |
+| `/about` | Who I am, how I build, current focus |
+| `/faq` | Straight answers, including marketplace communication rules |
+| `/start` | How to start a project — routes marketplace clients back to their platform |
+
+## Tech stack
+
+Next.js (App Router) · React · TypeScript · Tailwind CSS v4 · Framer Motion · lucide-react + react-icons · deployed on Vercel
+
+## Local setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & checks
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint       # ESLint
+npm run build      # production build — all routes prerender
+npm run start      # serve the production build locally
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment (Vercel)
 
-## Learn More
+1. Push the repository to GitHub.
+2. Import it in Vercel — no environment variables are required.
+3. After the first deploy, set the real domain in `src/data/site.ts` (`site.url`) and redeploy so canonical URLs, Open Graph URLs, and the sitemap point at the live domain.
+4. Add the image assets listed in `LAUNCH-CHECKLIST.md` (profile photo + app icons).
 
-To learn more about Next.js, take a look at the following resources:
+## Content sources
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All content is typed data in `src/data/` — `site.ts` (brand, nav, CTAs, socials), `projects.ts` (case studies), `services.ts`, `process.ts`, `faq.ts`, `tech-stack.ts`. Copy changes happen there, not in components.

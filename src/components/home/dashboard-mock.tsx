@@ -15,7 +15,10 @@ const bars = [34, 52, 41, 63, 48, 70, 58, 77, 64, 86, 72, 95];
  */
 export function DashboardMock() {
   return (
-    <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-border bg-surface text-left shadow-2xl shadow-black/50">
+    <div
+      aria-hidden
+      className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-border bg-surface text-left shadow-2xl shadow-black/50"
+    >
       <div className="flex h-10 items-center justify-between border-b border-border px-4">
         <div className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-border-strong" />

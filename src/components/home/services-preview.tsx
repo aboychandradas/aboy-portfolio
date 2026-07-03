@@ -58,7 +58,7 @@ export function ServicesPreview() {
                     href={`/services#${service.slug}`}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
                   >
-                    Learn more
+                    See service details
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>

@@ -43,7 +43,7 @@ export function ButtonLink({
   href: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
-  /** Renders a plain anchor (for mailto: and off-site links). */
+  /** Renders a plain anchor (for off-site links like GitHub). */
   external?: boolean;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLAnchorElement>;
@@ -69,19 +69,5 @@ export function ButtonLink({
     <Link href={href} className={classes} onClick={onClick}>
       {children}
     </Link>
-  );
-}
-
-export function Button({
-  variant,
-  size,
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"button"> & {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-}) {
-  return (
-    <button className={buttonClasses({ variant, size, className })} {...props} />
   );
 }
