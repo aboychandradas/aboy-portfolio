@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   ArrowRight,
   BookOpen,
@@ -14,7 +15,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
-import { ProfilePhoto } from "@/components/ui/profile-photo";
+import { ProfilePhoto } from "@/components/about/profile-photo";
 import { Reveal } from "@/components/motion/reveal";
 import { PageCta } from "@/components/sections/page-cta";
 
@@ -194,13 +195,19 @@ export default function AboutPage() {
               <Reveal delay={0.12} className="lg:sticky lg:top-24">
                 <div className="rounded-2xl border border-border bg-surface p-6">
                   <ProfilePhoto
-                    className="mb-5 aspect-square w-full rounded-xl"
-                    iconClassName="h-14 w-14"
-                    sizes="(min-width: 1024px) 272px, 100vw"
+                    className="mx-auto mb-5 max-w-60 rounded-xl"
+                    sizes="(min-width: 1024px) 240px, 70vw"
+                    priority
                   />
                   <div className="flex items-center gap-2.5">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand font-heading text-sm font-bold text-brand-foreground">
-                      A
+                    <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg border border-border/70 bg-surface shadow-sm">
+                      <Image
+                        src="/icon-192.png"
+                        alt=""
+                        width={36}
+                        height={36}
+                        className="h-full w-full object-cover"
+                      />
                     </span>
                     <div>
                       <p className="font-heading text-[0.95rem] font-semibold tracking-tight">

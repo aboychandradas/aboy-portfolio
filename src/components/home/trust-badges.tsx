@@ -1,7 +1,7 @@
 import { FileSpreadsheet, MessagesSquare, ShieldCheck } from "lucide-react";
 import { site } from "@/data/site";
+import { ProfilePhoto } from "@/components/about/profile-photo";
 import { Container } from "@/components/ui/container";
-import { ProfilePhoto } from "@/components/ui/profile-photo";
 import { Reveal } from "@/components/motion/reveal";
 
 const promises = [
@@ -33,7 +33,6 @@ export function TrustBadges() {
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
             <ProfilePhoto
               className="h-20 w-20 shrink-0 rounded-xl"
-              iconClassName="h-8 w-8"
               sizes="80px"
             />
             <div>
