@@ -2,7 +2,7 @@
 
 Professional portfolio of **Aboy Chandra Das** (Aboy Systems): a full-stack developer building practical business web apps — dashboards, CRM systems, automation tools, and admin panels.
 
-**Live demo:** _coming soon — deployed on Vercel_ <!-- TODO: add the real URL after deploy and update site.url in src/data/site.ts -->
+**Live Demo:** https://aboy-portfolio-xi.vercel.app/
 
 ## What this site is
 
