@@ -6,22 +6,10 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { site } from "@/data/site";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
-
-function BrandMark({ onNavigate }: { onNavigate?: () => void }) {
-  return (
-    <Link href="/" className="flex items-center gap-2.5" onClick={onNavigate}>
-      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand font-heading text-sm font-bold text-brand-foreground">
-        A
-      </span>
-      <span className="font-heading text-[0.95rem] font-semibold tracking-tight">
-        Aboy <span className="text-muted">Systems</span>
-      </span>
-    </Link>
-  );
-}
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -34,7 +22,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between">
-        <BrandMark onNavigate={closeMenu} />
+        <BrandLogo onClick={closeMenu} />
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           {site.nav.map((item) => (

@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedinIn, FaUpwork } from "react-icons/fa6";
 import { SiFiverr } from "react-icons/si";
 import { site, type SocialLink } from "@/data/site";
 import { services } from "@/data/services";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { Container } from "@/components/ui/container";
 
 const socialIcons: Record<SocialLink["icon"], React.ComponentType<{ className?: string }>> = {
@@ -37,14 +38,7 @@ export function Footer() {
       <Container className="py-16 sm:py-20">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand font-heading text-sm font-bold text-brand-foreground">
-                A
-              </span>
-              <span className="font-heading text-[0.95rem] font-semibold tracking-tight">
-                Aboy <span className="text-muted">Systems</span>
-              </span>
-            </div>
+            <BrandLogo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               Full-stack web apps for dashboards, CRM systems, automation, and
               business operations.
