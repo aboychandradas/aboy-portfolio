@@ -21,7 +21,7 @@ export const site = {
   owner: "Aboy Chandra Das",
   role: "Full-Stack Business Systems Developer",
   // Live deployment — drives canonicals, Open Graph URLs, and the sitemap.
-  url: "https://aboy-portfolio-xi.vercel.app",
+  url: "https://aboysystems.com",
   githubUrl: "https://github.com/aboychandradas",
   portfolioRepoUrl: "https://github.com/aboychandradas/aboy-portfolio",
   description:
@@ -46,7 +46,11 @@ export const site = {
       href: "https://github.com/aboychandradas",
       icon: "github",
     },
-    { label: "LinkedIn", href: "", icon: "linkedin" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/aboy-chandra-das",
+      icon: "linkedin",
+    },
     { label: "Upwork", href: "", icon: "upwork" },
     { label: "Fiverr", href: "", icon: "fiverr" },
   ] as SocialLink[],

@@ -40,6 +40,16 @@ export const metadata: Metadata = {
   authors: [{ name: site.owner }],
   creator: site.owner,
   alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Aboy Systems — Dashboards, CRMs & Business Web Apps",
     description: site.description,
