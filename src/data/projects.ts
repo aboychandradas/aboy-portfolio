@@ -244,7 +244,7 @@ export const projects: Project[] = [
     overview:
       "FieldOps is a self-initiated product I designed, built, and deployed end to end as the proof piece of my portfolio. It implements the exact playbook I bring to client work: take an operations workflow that lives in spreadsheets, give it a proper data model, and put a calm dashboard on top. Everything below describes the working build, which runs on seeded demo data.",
     problem:
-      "Field-service coordinators run the day from a whiteboard and a phone: which jobs are open, who's overloaded, what actually got done this week. The information exists — in texts, job sheets, and a spreadsheet — but assembling it costs the evening, and the weekly report is built by hand every Friday.",
+      "Field-service coordinators run the day from a whiteboard and scattered updates: which jobs are open, who's overloaded, what actually got done this week. The information exists — in texts, job sheets, and a spreadsheet — but assembling it costs the evening, and the weekly report is built by hand every Friday.",
     solution:
       "A job-centric dashboard: every job carries a status and an assignee, technicians get workload views, and the week's performance aggregates itself from the underlying data. Filters answer the real operational questions — what's overdue, who's free — and a one-click CSV export replaces the hand-built weekly report.",
     features: [
@@ -276,7 +276,7 @@ export const projects: Project[] = [
       {
         title: "Responsive layout",
         description:
-          "Readable on the office laptop and on a phone between site visits.",
+          "Readable on the office laptop and on smaller screens between site visits.",
       },
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
@@ -284,7 +284,7 @@ export const projects: Project[] = [
       "The coordinator's evening assembly ritual becomes a glance at a live board.",
       "Overload gets visible before the schedule breaks, not after the missed job.",
       "Weekly reporting drops from an hour of copy-paste to one export.",
-      "A shared board means 'what's the status?' is answered by a link, not a phone call.",
+      "A shared board means 'what's the status?' is answered by a link, not another manual update.",
     ],
     whatIBuilt: [
       "The full build, end to end: data model, dashboard UI, aggregation logic, CSV export, and deployment.",

@@ -29,7 +29,7 @@ export const processSteps: ProcessStep[] = [
     number: "01",
     title: "Understand the workflow",
     description:
-      "A call and a walkthrough of how the work happens today — the spreadsheet, the emails, and the exceptions nobody wrote down.",
+      "A clear project message and workflow walkthrough inside the platform: what you use now, what is slow, and what needs to be easier.",
     deliverable: "A plain-language summary of the workflow and its pain points",
   },
   {
