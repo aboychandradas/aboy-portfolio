@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     title: "Map the workflow",
     description:
-      "A short call and a walkthrough of how the work happens today — spreadsheets, emails, exceptions and all.",
+      "A clear project message and workflow walkthrough inside the platform — what you use now, what is slow, and what needs to be easier.",
   },
   {
     number: "02",
