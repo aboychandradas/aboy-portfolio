@@ -73,7 +73,7 @@ export default function ProcessPage() {
               return (
                 <li key={step.number} className="flex gap-5 sm:gap-7">
                   <div className="flex flex-col items-center">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border bg-surface font-mono text-sm font-medium text-brand-bright">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand/25 bg-brand-muted font-mono text-sm font-medium text-brand-bright">
                       {step.number}
                     </span>
                     {!isLast ? (

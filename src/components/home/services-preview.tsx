@@ -32,7 +32,7 @@ export function ServicesPreview() {
           const Icon = serviceIcons[service.icon];
           return (
             <Reveal key={service.slug} delay={index * 0.06}>
-              <div className="flex h-full flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-border-strong">
+              <div className="card-interactive flex h-full flex-col rounded-xl border border-border bg-surface p-6">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-muted">
                   <Icon className="h-5 w-5 text-brand-bright" />
                 </span>
@@ -56,10 +56,10 @@ export function ServicesPreview() {
                 <div className="mt-auto pt-5">
                   <Link
                     href={`/services#${service.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+                    className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
                   >
                     See service details
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
                   </Link>
                 </div>
               </div>
@@ -71,10 +71,10 @@ export function ServicesPreview() {
       <Reveal delay={0.2}>
         <Link
           href="/services"
-          className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+          className="group mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
         >
           Explore all services
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
         </Link>
       </Reveal>
     </Section>

@@ -20,8 +20,8 @@ export const site = {
   name: "Aboy Systems",
   owner: "Aboy Chandra Das",
   role: "Full-Stack Business Systems Developer",
-  // TODO: replace with the real domain after the first Vercel deploy.
-  url: "https://aboy-systems.vercel.app",
+  // Live deployment — drives canonicals, Open Graph URLs, and the sitemap.
+  url: "https://aboy-portfolio-xi.vercel.app",
   githubUrl: "https://github.com/aboychandradas",
   portfolioRepoUrl: "https://github.com/aboychandradas/aboy-portfolio",
   description:

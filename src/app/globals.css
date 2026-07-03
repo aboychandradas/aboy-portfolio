@@ -81,6 +81,29 @@
   }
 }
 
+/* Interactive cards share one hover treatment: stronger border + gentle lift. */
+@layer components {
+  .card-interactive {
+    transition:
+      border-color 200ms ease,
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .card-interactive:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px -20px rgb(0 0 0 / 0.6);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-interactive:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
 /* Faint blueprint grid used behind the hero */
 @utility bg-grid-subtle {
   background-image: linear-gradient(

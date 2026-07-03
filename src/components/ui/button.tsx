@@ -5,10 +5,11 @@ type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "md" | "lg";
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 motion-safe:active:translate-y-px";
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-brand text-brand-foreground hover:bg-brand-bright",
+  primary:
+    "bg-brand text-brand-foreground shadow-sm shadow-black/30 hover:bg-brand-bright",
   secondary:
     "border border-border bg-surface text-foreground hover:border-border-strong hover:bg-surface-raised",
   ghost: "text-muted hover:text-foreground",

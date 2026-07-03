@@ -54,7 +54,7 @@ export default function FaqPage() {
               as="h1"
               eyebrow="FAQ"
               title="Straight answers, before you ask."
-              lede="The questions clients usually ask before the first message — answered the same way I'd answer them in a call."
+              lede="The questions clients usually ask before the first message — answered the same way I'd answer them in a project chat."
             />
           </Reveal>
         </Container>
@@ -68,7 +68,7 @@ export default function FaqPage() {
                 <details className="group rounded-xl border border-border bg-surface transition-colors open:border-border-strong hover:border-border-strong">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-medium [&::-webkit-details-marker]:hidden">
                     <span>{item.question}</span>
-                    <ChevronDown className="h-4 w-4 shrink-0 text-faint transition-transform duration-200 group-open:rotate-180" />
+                    <ChevronDown className="h-4 w-4 shrink-0 text-faint transition-all duration-200 group-open:rotate-180 group-open:text-brand-bright" />
                   </summary>
                   <p className="px-5 pb-5 text-[15px] leading-relaxed text-muted">
                     {item.answer}

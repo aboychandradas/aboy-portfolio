@@ -320,7 +320,7 @@ export default function AboutPage() {
 
       <PageCta
         title="The proof matters more than the pitch."
-        body="See the systems I've built and scoped, or read exactly how a project with me runs from first call to handoff."
+        body="See the systems I've built and scoped, or read exactly how a project with me runs from first message to handoff."
       >
         <ButtonLink href="/work" size="lg">
           View my work

@@ -7,7 +7,7 @@ import { TechBadge } from "@/components/tech/tech-badge";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="grid overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-border-strong lg:grid-cols-5">
+    <article className="card-interactive grid overflow-hidden rounded-2xl border border-border bg-surface lg:grid-cols-5">
       <div className="h-56 border-b border-border bg-background/50 lg:col-span-2 lg:h-auto lg:min-h-72 lg:border-b-0 lg:border-r">
         <MotifPreview motif={project.motif} />
       </div>
@@ -54,12 +54,12 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto flex flex-wrap items-center gap-5 pt-7">
           <Link
             href={`/work/${project.slug}`}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
           >
             {project.status === "proof"
               ? "Read the case study"
               : "Read the build plan"}
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
           </Link>
           {project.liveUrl ? (
             <a

@@ -32,7 +32,7 @@ export function TrustBadges() {
         <Reveal>
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
             <ProfilePhoto
-              className="h-20 w-20 shrink-0 rounded-xl"
+              className="h-20 w-20 shrink-0 rounded-xl shadow-none"
               sizes="80px"
             />
             <div>

@@ -164,7 +164,7 @@ export default function StartPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {beforeYouMessage.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.05}>
-                <div className="h-full rounded-xl border border-border bg-surface p-6 transition-colors hover:border-border-strong">
+                <div className="card-interactive h-full rounded-xl border border-border bg-surface p-6">
                   <h3 className="font-medium">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
                     {item.description}

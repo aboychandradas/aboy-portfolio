@@ -16,7 +16,7 @@ export function TechStackGrid() {
                 {items.map((tech) => (
                   <div
                     key={tech.name}
-                    className="group flex items-start gap-3.5 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-border-strong"
+                    className="card-interactive group flex items-start gap-3.5 rounded-xl border border-border bg-surface p-4"
                   >
                     <tech.icon className="mt-0.5 h-5 w-5 shrink-0 text-muted transition-colors group-hover:text-brand-bright" />
                     <div>

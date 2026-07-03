@@ -64,7 +64,7 @@ export function Navbar() {
         {open ? (
           <motion.div
             id="mobile-nav"
-            className="overflow-hidden border-t border-border/60 bg-background lg:hidden"
+            className="overflow-hidden border-t border-border/60 bg-background shadow-lg shadow-black/30 lg:hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

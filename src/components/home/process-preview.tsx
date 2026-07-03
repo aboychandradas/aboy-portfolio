@@ -60,10 +60,10 @@ export function ProcessPreview() {
       <Reveal delay={0.24}>
         <Link
           href="/process"
-          className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+          className="group mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
         >
           See the full process
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
         </Link>
       </Reveal>
     </Section>

@@ -21,7 +21,7 @@ export function FeaturedWork() {
       <div className="mt-12 grid gap-5 lg:grid-cols-3">
         {featuredProjects.map((project, index) => (
           <Reveal key={project.slug} delay={index * 0.08}>
-            <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors hover:border-border-strong">
+            <article className="card-interactive flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
               <div className="h-44 border-b border-border bg-background/50">
                 <MotifPreview motif={project.motif} />
               </div>
@@ -60,12 +60,12 @@ export function FeaturedWork() {
                 <div className="mt-auto pt-5">
                   <Link
                     href={`/work/${project.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+                    className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
                   >
                     {project.status === "proof"
                       ? "Read the case study"
                       : "Read the build plan"}
-                    <ArrowUpRight className="h-4 w-4" />
+                    <ArrowUpRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
                   </Link>
                 </div>
               </div>
@@ -77,10 +77,10 @@ export function FeaturedWork() {
       <Reveal delay={0.24}>
         <Link
           href="/work"
-          className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+          className="group mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
         >
           All work
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
         </Link>
       </Reveal>
     </Section>

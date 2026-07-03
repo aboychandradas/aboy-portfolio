@@ -347,10 +347,10 @@ export default async function CaseStudyPage({
             </h2>
             <Link
               href="/work"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+              className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
             >
               All work
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
             </Link>
           </div>
 
@@ -359,7 +359,7 @@ export default async function CaseStudyPage({
               <Link
                 key={other.slug}
                 href={`/work/${other.slug}`}
-                className="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-border-strong"
+                className="card-interactive group block rounded-xl border border-border bg-surface p-6"
               >
                 <Badge tone={other.status === "proof" ? "brand" : "neutral"}>
                   {other.statusLabel}
@@ -374,7 +374,7 @@ export default async function CaseStudyPage({
                   {other.status === "proof"
                     ? "Read the case study"
                     : "Read the build plan"}
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5" />
                 </span>
               </Link>
             ))}

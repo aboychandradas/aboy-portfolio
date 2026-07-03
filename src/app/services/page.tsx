@@ -161,12 +161,12 @@ export default function ServicesPage() {
                       <div className="mt-8 border-t border-border/60 pt-6">
                         <Link
                           href={`/work/${related.slug}`}
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
+                          className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright transition-colors hover:text-foreground"
                         >
                           {related.status === "proof"
                             ? `See the deployed build: ${related.title}`
                             : `See the build plan: ${related.title}`}
-                          <ArrowUpRight className="h-4 w-4" />
+                          <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform motion-safe:group-hover:translate-x-0.5" />
                         </Link>
                       </div>
                     ) : null}
