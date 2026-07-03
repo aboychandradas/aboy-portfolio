@@ -5,8 +5,8 @@
  *   and their copy describes the spec/plan, not a delivered product.
  * - Metrics are either build-scope figures (roadmap) or demo-build facts (proof).
  *   TODO(aboy): verify every number and claim below against the real builds before publishing.
- * - liveUrl / githubUrl / image are placeholders: null renders a safe "coming soon"
- *   state, so only fill them in when the links are real.
+ * - liveUrl / githubUrl / image are placeholders: null renders a safe state
+ *   (or hides the repo action), so only fill them in when the links are real.
  */
 
 export type ProjectStatus = "proof" | "roadmap";

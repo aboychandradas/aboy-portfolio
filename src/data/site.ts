@@ -22,6 +22,8 @@ export const site = {
   role: "Full-Stack Business Systems Developer",
   // TODO: replace with the real domain after the first Vercel deploy.
   url: "https://aboy-systems.vercel.app",
+  githubUrl: "https://github.com/aboychandradas",
+  portfolioRepoUrl: "https://github.com/aboychandradas/aboy-portfolio",
   description:
     "Aboy Systems is the studio of Aboy Chandra Das — a full-stack developer building dashboards, CRM systems, automation tools, and admin workflows for small businesses, agencies, and e-commerce teams. Next.js, TypeScript, Tailwind CSS.",
   availability: "Available for new projects · Remote, worldwide",
@@ -39,8 +41,11 @@ export const site = {
     secondary: { label: "How to Start", href: "/start" },
   },
   socials: [
-    // TODO: confirm the GitHub username and add the remaining profile URLs.
-    { label: "GitHub", href: "https://github.com/Avoy22", icon: "github" },
+    {
+      label: "GitHub",
+      href: "https://github.com/aboychandradas",
+      icon: "github",
+    },
     { label: "LinkedIn", href: "", icon: "linkedin" },
     { label: "Upwork", href: "", icon: "upwork" },
     { label: "Fiverr", href: "", icon: "fiverr" },

@@ -50,7 +50,7 @@ function honestyNote(project: Project) {
     : `${project.title} is a client-grade build roadmap — a fully scoped system I'm building as a portfolio product. This page is the build spec, labeled as such. It is not a delivered client project.`;
 }
 
-/** Live demo / GitHub actions that degrade to safe, non-clickable placeholders. */
+/** Live demo action with a placeholder; GitHub only renders when a real repo exists. */
 function DemoLinks({
   project,
   className,
@@ -85,21 +85,9 @@ function DemoLinks({
           className={className}
         >
           <FaGithub className="h-4 w-4" />
-          View code
+          View Source
         </ButtonLink>
-      ) : (
-        <span
-          aria-disabled="true"
-          title="Repository link coming soon"
-          className={buttonClasses({
-            variant: "secondary",
-            className: cn("cursor-not-allowed opacity-60", className),
-          })}
-        >
-          <FaGithub className="h-4 w-4" />
-          Code · coming soon
-        </span>
-      )}
+      ) : null}
     </>
   );
 }

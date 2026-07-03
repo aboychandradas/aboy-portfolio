@@ -104,10 +104,6 @@ const currentFocus = [
 ];
 
 export default function AboutPage() {
-  const github = site.socials.find(
-    (social) => social.icon === "github" && social.href
-  );
-
   return (
     <>
       <section className="relative overflow-hidden">
@@ -152,6 +148,18 @@ export default function AboutPage() {
                     project isn’t a good fit, I’ll say so and point you
                     somewhere better.
                   </p>
+                </div>
+              </Reveal>
+              <Reveal delay={0.14}>
+                <div className="mt-7">
+                  <ButtonLink
+                    href={site.portfolioRepoUrl}
+                    external
+                    variant="secondary"
+                  >
+                    <FaGithub className="h-4 w-4" />
+                    View GitHub
+                  </ButtonLink>
                 </div>
               </Reveal>
 
@@ -247,17 +255,6 @@ export default function AboutPage() {
                     <ButtonLink href="/start" className="w-full">
                       How to Start
                     </ButtonLink>
-                    {github ? (
-                      <ButtonLink
-                        href={github.href}
-                        external
-                        variant="secondary"
-                        className="w-full"
-                      >
-                        <FaGithub className="h-4 w-4" />
-                        GitHub
-                      </ButtonLink>
-                    ) : null}
                   </div>
                 </div>
               </Reveal>
