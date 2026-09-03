@@ -34,7 +34,7 @@ export function DashboardMock() {
         <div className="hidden flex-col gap-1 border-r border-border p-3 sm:flex">
           <div className="flex h-8 items-center rounded-md bg-brand-muted px-2.5">
             <span className="font-mono text-[10px] font-medium tracking-[0.15em] text-brand-bright">
-              FIELDOPS
+              OPS OS
             </span>
           </div>
           <div className="mt-2 flex items-center gap-2 rounded-md bg-surface-raised px-2.5 py-2">
