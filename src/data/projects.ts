@@ -116,7 +116,7 @@ export const projects: Project[] = [
       "A complete v1 specification: 14 screens, the PostgreSQL data model, and the alert-rules design.",
       "KPI definitions written down precisely — what counts as revenue, when an order counts, how refunds land.",
       "An import mapping designed for messy real-world CSVs: inconsistent SKUs, currencies, and date formats.",
-      "UI direction consistent with my FieldOps build: dense tables, calm charts, no dashboard theater.",
+      "A UI direction fixed in the spec before any screen is built: dense tables, calm charts, no dashboard theater.",
     ],
     lessonsLearned: [
       "Alert design is a product problem, not a query — naive thresholds train people to ignore alerts.",
