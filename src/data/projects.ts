@@ -4,7 +4,6 @@
  * - "roadmap" projects are scoped, client-grade build specs — always labeled as such,
  *   and their copy describes the spec/plan, not a delivered product.
  * - Metrics are either build-scope figures (roadmap) or demo-build facts (proof).
- *   TODO(aboy): verify every number and claim below against the real builds before publishing.
  * - liveUrl / githubUrl / image are placeholders: null renders a safe state
  *   (or hides the repo action), so only fill them in when the links are real.
  */
@@ -237,83 +236,90 @@ export const projects: Project[] = [
     slug: "fieldops-analytics-os",
     title: "FieldOps Analytics OS",
     subtitle:
-      "An operations dashboard for field-service teams — jobs, technicians, and performance in one place instead of a whiteboard and three spreadsheets.",
-    category: "Field service operations",
+      "Marketplace finance and operations analytics for a field-service platform — a seeded Python-to-SQLite pipeline, a versioned SQL analysis library, and a deployed dashboard over revenue, fulfilment, and payment risk.",
+    category: "Marketplace analytics",
     status: "proof",
     statusLabel: "Self-initiated build · Deployed",
     overview:
-      "FieldOps is a self-initiated product I designed, built, and deployed end to end as the proof piece of my portfolio. It implements the exact playbook I bring to client work: take an operations workflow that lives in spreadsheets, give it a proper data model, and put a calm dashboard on top. Everything below describes the working build, which runs on seeded demo data.",
+      "FieldOps Analytics OS is a self-initiated build I designed, built, and deployed end to end as the proof piece of my portfolio. It models a two-sided field-service marketplace — buyers, providers, work orders, payments, reviews, and support tickets — generates the dataset from a fixed seed, loads it into SQLite, analyses it through a library of SQL files, and presents the results in a Streamlit dashboard. Everything below describes the working build, which runs entirely on generated demo data.",
     problem:
-      "Field-service coordinators run the day from a whiteboard and scattered updates: which jobs are open, who's overloaded, what actually got done this week. The information exists — in texts, job sheets, and a spreadsheet — but assembling it costs the evening, and the weekly report is built by hand every Friday.",
+      "A field-service marketplace holds its numbers in transaction records, not in answers. Leadership needs to know how much volume the platform is moving, how much revenue it keeps after provider payouts, whether the take rate is holding across months and categories, how concentrated revenue is in a handful of buyer accounts, and which buyers are drifting late on payment. Reading that out of raw work-order and payment tables means writing the query again every time someone asks.",
     solution:
-      "A job-centric dashboard: every job carries a status and an assignee, technicians get workload views, and the week's performance aggregates itself from the underlying data. Filters answer the real operational questions — what's overdue, who's free — and a one-click CSV export replaces the hand-built weekly report.",
+      "A repeatable pipeline instead of ad-hoc queries: generate the marketplace dataset with a fixed seed, load it into a relational SQLite database, and keep the analysis in a versioned SQL library rather than scattered across notebooks. The dashboard sits on top of that layer — sidebar filters, KPI cards, Plotly charts, a finance deep dive, a metric glossary, and CSV export of whatever the current filters select.",
     features: [
       {
-        title: "Job status board",
+        title: "Executive KPI overview",
         description:
-          "Every job with status, assignee, and due date — filterable by technician, status, and date range.",
+          "Gross work-order value, platform revenue, provider payout, take rate, success and cancellation rates, and average payment delay, read in one pass.",
       },
       {
-        title: "Technician workload",
+        title: "Revenue and take-rate trends",
         description:
-          "Open and completed jobs per technician, so dispatch decisions stop being guesswork.",
+          "Gross value, platform revenue, and payout by month, with take-rate movement tracked over time and across service categories.",
       },
       {
-        title: "Performance metrics",
+        title: "Buyer revenue concentration",
         description:
-          "Completion rates and weekly throughput aggregated automatically from job data.",
+          "Revenue share ranked by buyer account, so dependence on a few names is measured rather than assumed.",
       },
       {
-        title: "Weekly report export",
+        title: "Payment delay risk",
         description:
-          "The Friday report as one click of CSV, shaped for a spreadsheet-native manager.",
+          "Buyer-level late-payment rates and average days past due, bucketed into risk levels for collections follow-up.",
       },
       {
-        title: "Search & filters",
+        title: "Filtered views with CSV export",
         description:
-          "Find any job fast — when the dashboard is the source of truth, lookup speed matters.",
+          "Sidebar filters for date range, service category, work-order status, buyer industry, and country — every KPI and chart recomputes, and the active selection exports to CSV.",
       },
       {
-        title: "Responsive layout",
+        title: "Finance deep dive",
         description:
-          "Readable on the office laptop and on smaller screens between site visits.",
+          "Monthly finance performance, average work-order value, category finance performance, and a metric glossary that defines every KPI on the page.",
       },
     ],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    techStack: [
+      "Python",
+      "SQL",
+      "SQLite",
+      "Streamlit",
+      "pandas",
+      "Plotly",
+    ],
     businessValue: [
-      "The coordinator's evening assembly ritual becomes a glance at a live board.",
-      "Overload gets visible before the schedule breaks, not after the missed job.",
-      "Weekly reporting drops from an hour of copy-paste to one export.",
-      "A shared board means 'what's the status?' is answered by a link, not another manual update.",
+      "Revenue quality is visible month by month: what the platform keeps after payouts, and whether the take rate is holding.",
+      "Buyer concentration is measured, so dependence on a few accounts surfaces before it becomes an exposure.",
+      "Late-payment risk arrives as a ranked shortlist instead of a collections hunt through payment records.",
+      "Recurring finance questions get answered from a versioned SQL library rather than a fresh one-off query each time.",
     ],
     whatIBuilt: [
-      "The full build, end to end: data model, dashboard UI, aggregation logic, CSV export, and deployment.",
-      "Status and filtering mechanics tuned for how a dispatcher actually scans a board.",
-      "A seeded demo dataset that exercises the edge cases — overdue jobs, idle technicians, heavy weeks.",
-      "The design language this portfolio shares: dense tables, calm charts, no dashboard theater.",
+      "A seeded synthetic data generator for a two-sided marketplace: buyers, providers, work orders, payments, reviews, and support tickets.",
+      "The Python-to-SQLite load step that turns those tables into a relational analytics database, plus a bootstrap that rebuilds it on deploy when the database file is absent.",
+      "A library of 13 SQL analysis files covering revenue KPIs, work-order health, provider and category performance, location revenue, payment delay, take-rate trend, and buyer concentration.",
+      "The Streamlit dashboard: sidebar filters, KPI cards, Plotly charts, interactive tables, a finance deep dive, a metric glossary, and CSV export of the filtered dataset.",
+      "The written layer around it — an MIT-licensed repository with a case study, data model, SQL guide, and business-insight write-ups.",
     ],
     lessonsLearned: [
-      "Aggregation logic belongs in one tested layer — scattering metric math across components breeds contradictory numbers.",
-      "Empty and edge states are the real UI work; a dashboard is judged on its worst data day.",
-      "Building for a non-technical dispatcher forces plain-language labels — jargon is a bug.",
+      "Metric definitions belong in one place. Take rate and success rate can each be computed two defensible ways, and two different answers to the same question is what a stakeholder remembers.",
+      "A fixed random seed is what makes a synthetic dataset defensible — the figures quoted in the documentation have to still be there when someone reruns the pipeline.",
+      "Empty and edge states are the real dashboard work; a filtered view is judged on the selection that returns almost nothing.",
+      "Writing for a business reader forces plain-language labels — a metric glossary is not decoration.",
     ],
     futureImprovements: [
-      "Role-based auth separating coordinator and technician views.",
-      "A technician-facing mobile view for status updates from the field.",
-      "Notification hooks for overdue and unassigned jobs.",
-      "Scheduled weekly report emails.",
+      "Automated tests over the pipeline and the metric calculations — the repository has none today.",
+      "A CI check that runs those tests and the SQL library on every push.",
+      "A scheduled pipeline run so the analytics database refreshes on a cadence instead of on a manual rebuild.",
+      "Swapping the synthetic generator for a real data source behind the same SQL layer.",
     ],
-    // TODO(aboy): adjust these to match the real seeded build before publishing.
     metrics: [
-      { label: "Demo jobs seeded", value: "500+" },
-      { label: "Dashboard views", value: "12" },
-      { label: "Report export", value: "1 click" },
+      { label: "Work orders analysed", value: "10,000" },
+      { label: "Providers modelled", value: "1,500" },
+      { label: "SQL analyses", value: "13" },
     ],
     metricsNote:
-      "Figures from the seeded demo build — portfolio data, not client data.",
-    // TODO(aboy): add the real deployment + repo URLs when ready to publish them.
-    liveUrl: null,
-    githubUrl: null,
+      "Figures from the generated demo fixture — 500 buyers, 1,500 providers, and 10,000 work orders produced by a fixed-seed generator, plus the 13 SQL files in the repository. Portfolio data, not client data.",
+    liveUrl: "https://fieldops-analytics-os.streamlit.app/",
+    githubUrl: "https://github.com/aboychandradas/fieldops-analytics-os",
     image: null,
     motif: "table",
     featured: true,
