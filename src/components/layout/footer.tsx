@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaUpwork } from "react-icons/fa6";
+import { FaGithub, FaUpwork } from "react-icons/fa6";
 import { SiFiverr } from "react-icons/si";
 import { site, type SocialLink } from "@/data/site";
 import { services } from "@/data/services";
@@ -8,7 +8,6 @@ import { Container } from "@/components/ui/container";
 
 const socialIcons: Record<SocialLink["icon"], React.ComponentType<{ className?: string }>> = {
   github: FaGithub,
-  linkedin: FaLinkedinIn,
   upwork: FaUpwork,
   fiverr: SiFiverr,
 };

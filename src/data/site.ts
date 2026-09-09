@@ -7,14 +7,16 @@ export interface SocialLink {
   label: string;
   /** Links with an empty href are hidden until the real profile URL is added. */
   href: string;
-  icon: "github" | "linkedin" | "upwork" | "fiverr";
+  icon: "github" | "upwork" | "fiverr";
 }
 
 /**
  * Marketplace compliance (hard constraint): this site must NOT expose a direct
  * contact method — no email, phone, WhatsApp, Telegram, Calendly, or contact
  * form. Clients from Upwork/Fiverr/Freelancer are pointed back to the platform
- * where they found the portfolio (see /start). Do not re-add an email field.
+ * where they found the portfolio (see /start). Do not re-add an email field,
+ * and do not link a social profile that opens a direct-message channel — the
+ * outbound link graph has to stay as contact-clean as the pages themselves.
  */
 export const site = {
   name: "Aboy Systems",
@@ -45,11 +47,6 @@ export const site = {
       label: "GitHub",
       href: "https://github.com/aboychandradas",
       icon: "github",
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/aboy-chandra-das",
-      icon: "linkedin",
     },
     { label: "Upwork", href: "", icon: "upwork" },
     { label: "Fiverr", href: "", icon: "fiverr" },
