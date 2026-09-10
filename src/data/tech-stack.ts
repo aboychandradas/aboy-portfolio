@@ -47,13 +47,13 @@ export const techStack: TechItem[] = [
     name: "React",
     category: "Frontend",
     icon: SiReact,
-    description: "Component-based UI — the base of every screen I build.",
+    description: "Component-based UI — my default for interactive screens.",
   },
   {
     name: "Next.js",
     category: "Frontend",
     icon: SiNextdotjs,
-    description: "The framework behind every app I ship — routing, rendering, and APIs in one place.",
+    description: "My default framework for web apps — routing, rendering, and APIs in one place.",
   },
   {
     name: "TypeScript",
@@ -65,7 +65,7 @@ export const techStack: TechItem[] = [
     name: "JavaScript",
     category: "Frontend",
     icon: SiJavascript,
-    description: "The language under everything. I keep it modern and readable.",
+    description: "The browser language behind my web builds. I keep it modern and readable.",
   },
   {
     name: "Tailwind CSS",
@@ -109,7 +109,7 @@ export const techStack: TechItem[] = [
     name: "Zod",
     category: "Backend & Database",
     icon: SiZod,
-    description: "Validates every form and import, so bad data stops at the door.",
+    description: "Validates forms and imports in my TypeScript builds, so bad data stops at the door.",
   },
 
   // Data & Analytics
@@ -155,7 +155,7 @@ export const techStack: TechItem[] = [
     name: "Vercel",
     category: "Tools & Deployment",
     icon: SiVercel,
-    description: "Deployment for every build — live URLs and preview links.",
+    description: "Where my web apps deploy — live URLs and preview links.",
   },
 ];
 

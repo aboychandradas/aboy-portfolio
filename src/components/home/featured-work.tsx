@@ -14,7 +14,7 @@ export function FeaturedWork() {
         <SectionHeading
           eyebrow="Featured work"
           title="Systems I design and build end to end."
-          lede="Self-initiated products that prove out real business workflows. No invented clients — the label on each card says exactly what it is."
+          lede="Self-initiated systems built around real business workflows — one deployed, the rest scoped in the open. No invented clients — the label on each card says exactly what it is."
         />
       </Reveal>
 

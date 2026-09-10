@@ -27,7 +27,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "What tech stack do you use?",
     answer:
-      "Next.js, React, TypeScript, and Tailwind CSS, with PostgreSQL and Prisma when the project needs a database. Deployments go to Vercel with written deployment notes. CSV and Excel workflows are a standard part of most builds.",
+      "For web apps, my default is Next.js, React, TypeScript, and Tailwind CSS, with PostgreSQL and Prisma when the project needs a database, deployed to Vercel with written deployment notes. When the problem is mainly a data problem, I work in Python, pandas, and SQL instead — FieldOps Analytics OS on the Work page is built that way. CSV and Excel workflows are a standard part of most builds.",
   },
   {
     question: "How do you manage project scope?",
