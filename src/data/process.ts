@@ -69,6 +69,12 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
+/**
+ * The subset shown as a preview on the homepage. The full six render on
+ * /process — keeping the subset here means both surfaces stay one source.
+ */
+export const previewProcessSteps: ProcessStep[] = processSteps.slice(0, 4);
+
 export const clarityPractices: ClarityPractice[] = [
   {
     icon: "phases",
