@@ -21,7 +21,7 @@ export function Hero() {
         <div className="flex flex-col items-center pb-16 pt-20 text-center sm:pb-24 sm:pt-28">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs text-muted">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+              <span className="h-1.5 w-1.5 motion-safe:animate-pulse rounded-full bg-emerald-400" />
               {site.availability}
             </span>
           </Reveal>

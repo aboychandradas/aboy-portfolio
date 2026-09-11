@@ -13,7 +13,7 @@
   /* Text */
   --foreground: oklch(0.955 0.004 277);
   --muted: oklch(0.71 0.014 277);
-  --faint: oklch(0.54 0.014 277);
+  --faint: oklch(0.62 0.014 277);
 
   /* Brand — deep indigo */
   --brand: oklch(0.55 0.21 277);
