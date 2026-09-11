@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { site } from "@/data/site";
 import { BrandLogo } from "@/components/layout/brand-logo";
@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const reduceMotion = useReducedMotion();
   const closeMenu = () => setOpen(false);
 
   const isActive = (href: string) =>
@@ -68,7 +69,11 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : { duration: 0.25, ease: "easeOut" }
+            }
           >
             <Container className="flex flex-col gap-1 py-4">
               {site.nav.map((item) => (
